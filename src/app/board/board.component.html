@@ -1,0 +1,6 @@
+<h1>Current player : {{ player }}</h1>
+<h2 *ngIf="winner">winner is : {{winner}}</h2>
+<main>
+  <app-square *ngFor="let val of squares; let i = index" [boxValue]="val" (click)="makeMove(i)">
+  </app-square>
+</main>
